@@ -270,3 +270,33 @@ body, html {
         margin-bottom: 15px !important;
     }
 }
+
+/* --- TYPING INDICATOR --- */
+.typing_indicator {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #3d4350; /* Matches bot bubble */
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    width: fit-content;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.typing_dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    animation: typing 1.4s infinite ease-in-out both;
+}
+
+.typing_dot:nth-child(1) { animation-delay: -0.32s; }
+.typing_dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+    0%, 80%, 100% { transform: scale(0); opacity: 0.5;}
+    40% { transform: scale(1); opacity: 1;}
+}
